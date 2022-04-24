@@ -34,3 +34,10 @@ app.post('/v1/explorers/', (req, res) => {
     res.status(201).json({message: "created"})
 })
 
+app.put('/v1/explorers/:id', (req, res) => {
+    console.log(`API Explorers PUT request ${new Date()}`)
+    console.log(`Update explorer with ID ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({message: "updated"})
+})
+
